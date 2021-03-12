@@ -137,6 +137,7 @@ main {
           &:hover {
             background: var(--white);
             color: var(--orange);
+            font-weight: bold;
           }
         }
       }
@@ -187,6 +188,7 @@ main {
 
         &:hover .code {
           color: var(--orange);
+          font-weight: bold;
         }
       }
       p {
@@ -212,10 +214,19 @@ main {
     align-items: center;
     justify-content: start;
     font-size: var(--sz-10);
-    .logos {
+    .logos-profile {
       width: 15vh;
       height: auto;
       margin: var(--sz-10);
+
+      &:hover {
+        transition: transform 0.3s ease-out;
+        transform: translateY(-8px);
+        -webkit-transform: translateY(-8px);
+        -moz-transform: translateY(-8px);
+        -ms-transform: translateY(-8px);
+        -o-transform: translateY(-8px);
+      }
     }
   }
 }
