@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Roboto:ital,wght@0,100;0,300;1,100&display=swap");
+
+/*Definición de valores iniciales*/
+* {
+  margin: 0;
+  margin: 0;
+  list-style: none;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: var(--white);
+}
+html {
+  box-sizing: border-box;
+  /* Set font size for easy rem calculations
+   * default document font size = 16px, 1rem = 16px, 100% = 16px
+   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+  */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+/* Valores personalizados */
+:root {
+  --orange: #cf4c28;
+  --red: #cf2727;
+  --blue: #2857cf;
+  --green: #27cf65;
+  --gray: #2b3030;
+  --white: #f2f2f2;
+  /* size */
+  --size-1: 0.125rem;
+  --size-2: 0.25rem;
+  --size-3: 0.5rem;
+  --size-4: 0.75rem;
+  --size-5: 1rem;
+  --size-6: 1.125rem;
+  --size-7: 1.25rem;
+  --size-8: 1.5rem;
+  --size-9: 1.75rem;
+  --size-10: 2rem;
+  --size-11: 2.125rem;
+  --size-12: 2.25rem;
+  --size-13: 2.75rem;
+  --size-14: 3rem;
+}
+
+body {
+  font-family: sans-serif;
+  width: 100%;
+  font-family: "Roboto", "Poppins", sans-serif;
+  font-size: 1.8rem; /* 18px */
+  font-weight: 400;
+  line-height: 1.4;
+  background: var(--gray);
+}
+h1,
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 4.2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-white);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+/* text-shadow: 0 1px 2px rgba(0,0,0,0.5), 0px -1px 2px rgba(255,255,255,0.8); */
+/*Consulta de medios para ajustar el tamaño de las fuentes*/
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+/* CSS Custom */
+
+main {
+  width: 100%;
+  /* navbar */
+  .navbar {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    .nav-list {
+      display: flex;
+      width: 100%;
+      background-color: var(--orange);
+      color: var(--white);
+      justify-content: flex-end;
+      padding-right: var(--size-8);
+      .nav-item {
+        a {
+          display: block;
+          margin-right: var(--size-1);
+          height: 100%;
+          padding: var(--size-5);
+          font-family: "Roboto";
+          &:hover {
+            background: var(--white);
+            color: var(--orange);
+          }
+        }
+      }
+    }
+  }
+  /* Welcome Section */
+  #welcome-section {
+    padding: calc(var(--size-14) * 5);
+    h1 {
+      color: var(--orange);
+      font-family: Roboto, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    }
+    p {
+      text-align: center;
+      color: var(--orange);
+      font-size: var(--size-10);
+      font-family: Roboto, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    }
+  }
+}
+/* Consulta de medios */
+@media (max-width: 28.75em) {
+  .navbar {
+    justify-content: center;
+  }
+
+  .nav-list {
+    margin: 0 1rem;
+  }
+}
